@@ -20,16 +20,19 @@ public class calendar {
 		return MAX_DAYS[month-1];
 		}
 	}
-	public void printCalendar(int year, int month) {
+	public void printCalendar(int year, int month, int weekday) {
 		System.out.printf("  <<%4d  %3d>>\n", year, month);
 System.out.println("일   월   화   수   목   금   토");
 System.out.println("---------------------");
 
-int maxDay;
-if(isLeapyear(year)) {
-	
-	}
- maxDay = getmaxDaysOFMonth(year, month);
+//print blank space
+for (int i=0; i< weekday; i++) {
+	System.out.print("   ");
+}
+int maxDay = getmaxDaysOFMonth(year, month);
+
+
+//print from second line to last
 
 for(int i=1; i<= maxDay; i++) {
   System.out.printf("%3d",i);
